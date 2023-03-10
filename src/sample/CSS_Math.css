@@ -1,0 +1,10 @@
+.button{
+    -fx-font-family: "Arial";
+    -fx-font-size: 13;
+}
+.label{
+    -fx-font-weight: bold;
+}
+.tooltip{
+    -fx-font-size: 15;
+}

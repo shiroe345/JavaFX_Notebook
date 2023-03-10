@@ -1,0 +1,12 @@
+/*#but1{
+	-fx-background-radius: 5em;
+}*/
+.button{
+	/*-fx-background-radius: 3em;*/
+	-fx-font-weight: bold;
+}
+
+#closeButton{
+	-fx-font-weight: bold;
+}
+

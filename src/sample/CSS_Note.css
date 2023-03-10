@@ -1,0 +1,82 @@
+.button{
+    -fx-background-color: linear-gradient(to right, #FFED9E, #FFF3BA, #FFED9E);
+    -fx-font-family: "Arial";
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+}
+.text-field {
+    -fx-background-color: transparent;
+    -fx-background-image: url("line.png");
+    -fx-font-family: "Meiryo UI";
+    -fx-font-size: 20;
+    -fx-font-weight: normal;
+}
+.text-field .scroll-pane {
+    -fx-background-color: transparent;
+}
+.text-field .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+.text-field .scroll-pane .content{
+    -fx-background-color: transparent;
+}
+.text-field:if-bold{
+    -fx-font-weight: bold;
+}
+.text-field:if-italic{
+    -fx-font-style: italic;
+}
+#boldButton{
+    -fx-background-image: url("bold.png");
+}
+#boldButton:hover{
+    -fx-background-image: url("bold_hovered.png");
+}
+#closeWindow{
+    -fx-background-image: url("close_window_normal.png");
+    -fx-background-size: 32px;
+    -fx-pref-height: 32px;
+    -fx-pref-width: 32px;
+}
+#closeWindow:hover{
+    -fx-background-image: url("close_window.png");
+}
+#closeWindow:pressed{
+    -fx-background-image: url("close_window_pressed.png");
+}
+#italicButton{
+    -fx-background-image: url("italic.png");
+}
+#italicButton:hover{
+    -fx-background-image: url("italic_hovered.png");
+}
+#maximize{
+    -fx-background-image: url("maximize_window_normal.png");
+    -fx-background-size: 32px;
+    -fx-pref-height: 32px;
+    -fx-pref-width: 32px;
+}
+#maximize:hover{
+    -fx-background-image: url("maximize_window.png");
+}
+#minimize{
+    -fx-background-image: url("minimize_window_normal.png");
+    -fx-background-size: 32px;
+    -fx-pref-height: 32px;
+    -fx-pref-width: 32px;
+}
+#minimize:hover{
+    -fx-background-image: url("minimize_window.png");
+}
+#page_next{
+    -fx-background-image: url("page_next.png");
+    -fx-background-size: 32px;
+    -fx-pref-height: 32px;
+    -fx-pref-width: 32px;
+}
+#page_prev{
+    -fx-background-image: url("page_prev.png");
+    -fx-background-size: 32px;
+    -fx-pref-height: 32px;
+    -fx-pref-width: 32px;
+}

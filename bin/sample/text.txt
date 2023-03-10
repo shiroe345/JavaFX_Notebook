@@ -1,0 +1,91 @@
+public void openFile(ActionEvent e) throws IOException {
+		////選檔
+		FileChooser fileChooser = new FileChooser();
+		fileChooser.setTitle("load file");
+		fileChooser.setInitialDirectory(new File("C:\\Users\\李承哲\\Desktop"));
+        //fileChooser.getExtensionFilters().addAll(new ExtensionFilter("text file" ,"*.txt"), new ExtensionFilter("pdf","*.pdf"));///可以抓的檔案種類
+		fileChooser.getExtensionFilters().add(new ExtensionFilter("text file" ,"*.txt"));
+		try {
+			File file = fileChooser.showOpenDialog(null);
+			fileChooser.setInitialDirectory(file.getParentFile());//設定初始資料夾
+			/////////////讀檔
+			if(file != null) {
+	        	FileReader fr = new FileReader(file.getAbsolutePath());
+	        	BufferedReader br = new BufferedReader(fr);
+	        	String a = "";
+	        	while (br.ready()) {
+	        		a += br.readLine();
+	        		a += "\n";
+	        	}
+	        	fr.close();
+	        	textArea.setText(a);
+	        }
+	        else {
+	        	Alert alert = new Alert(AlertType.WARNING,"您沒有開啟檔案");
+	        	alert.show();
+	        }
+		}catch(Exception ex) {
+			System.out.println("-1");
+		}
+	}
+	////////////////////////
+	public void newFile(ActionEvent e) throws IOException {
+		sn(e);
+		Parent root = FXMLLoader.load(getClass().getResource("note.fxml"));
+		stage = (Stage)textArea.getScene().getWindow();
+		Scene scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
+	}
+	////////////////////////
+	public void save(ActionEvent e) {
+		FileChooser fileChooser = new FileChooser();
+		fileChooser.setTitle("save file");
+		fileChooser.setInitialDirectory(new File("C:\\Users\\李承哲\\Desktop"));
+		fileChooser.getExtensionFilters().add(new ExtensionFilter("text file" ,"*.txt"));
+		try {
+			File file = fileChooser.showSaveDialog(null);
+			fileChooser.setInitialDirectory(file.getParentFile());//設定初始資料夾
+			///////////寫檔
+			if(file != null) {
+				try {
+		            FileWriter fileWriter = null;
+		            fileWriter = new FileWriter(file);
+		            fileWriter.write(textArea.getText());
+		            fileWriter.close();
+		        }catch(Exception ex) {
+		        }		        
+			}
+		}catch(Exception ex) {
+			System.out.println("-1");
+		}
+	}
+	///////////////////////
+	public void closeFile(ActionEvent e) {
+		sn(e);
+		Stage stage = (Stage)textArea.getScene().getWindow();//利用物件找stage
+		stage.close();
+	}
+	/////////////////////要存檔嗎
+	public void sn(ActionEvent e) {
+		Stage stage = new Stage();
+		stage.initModality(Modality.APPLICATION_MODAL);
+		Pane pane= null;
+		try {
+			pane = FXMLLoader.load(Controller.class.getResource("saveoenot.fxml"));
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		}
+		Scene scene = new Scene(pane);
+		stage.setScene(scene);
+		stage.showAndWait();
+	}
+	public void yes(ActionEvent e) {
+		save(e);
+		Stage stage = (Stage)label1.getScene().getWindow();//利用物件找stage
+		stage.close();
+	}
+	public void no(ActionEvent e) {
+		Stage stage = (Stage)label1.getScene().getWindow();//利用物件找stage
+		stage.close();
+	}

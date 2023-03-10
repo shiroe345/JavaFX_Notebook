@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="709.0" prefWidth="631.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Control_Math">
+   <children>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="643.0" prefWidth="603.0">
+         <children>
+            <Label text="操作模式：" />
+            <HBox prefHeight="27.0" prefWidth="603.0">
+               <children>
+                  <Button fx:id="supscript" mnemonicParsing="false" onAction="#supscript" prefHeight="25.0" prefWidth="50.0" text="上標">
+                     <tooltip>
+                        <Tooltip text="從選單中輸入的文字會變成上標文字，只限部分文字" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="subscript" mnemonicParsing="false" onAction="#subscript" prefHeight="25.0" prefWidth="50.0" text="下標">
+                     <tooltip>
+                        <Tooltip text="從選單中輸入的文字會變成下標文字，只限部分文字" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="caplock" mnemonicParsing="false" onAction="#caplock" prefHeight="25.0" prefWidth="50.0" text="大寫">
+                     <tooltip>
+                        <Tooltip text="從選單中輸入的文字會變成大寫" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="arc" mnemonicParsing="false" onAction="#arc" prefHeight="25.0" prefWidth="50.0" text="反函">
+                     <tooltip>
+                        <Tooltip text="三角或雙曲函數會變成反函數" />
+                     </tooltip>
+                  </Button>
+               </children>
+            </HBox>
+            <Label text="等式、運算式：" />
+            <HBox prefHeight="26.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="equal" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="=">
+                     <tooltip>
+                        <Tooltip text="等於" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="inequal" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="≠">
+                     <tooltip>
+                        <Tooltip text="不等於" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="similarEual" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="≃">
+                     <tooltip>
+                        <Tooltip text="約等於" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="simlarEq" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="≒">
+                     <tooltip>
+                        <Tooltip text="約等於" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="define1" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text=":=">
+                     <tooltip>
+                        <Tooltip text="定義" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="define2" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="≡">
+                     <tooltip>
+                        <Tooltip text="定義" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="less" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="&lt;">
+                     <tooltip>
+                        <Tooltip text="小於" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="lessOrEqual" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="≤">
+                     <tooltip>
+                        <Tooltip text="小於等於" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="tooSmall" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="≪">
+                     <tooltip>
+                        <Tooltip text="極小於" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="more" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="&gt;">
+                     <tooltip>
+                        <Tooltip text="大於" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="moreOrEqual" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="≥">
+                     <tooltip>
+                        <Tooltip text="大於等於" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="tooBig" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="≫">
+                     <tooltip>
+                        <Tooltip text="極大於" />
+                     </tooltip>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="27.0" prefWidth="603.0">
+               <children>
+                  <Button fx:id="plus" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="+">
+                     <tooltip>
+                        <Tooltip text="加號、正號" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="subtract" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="-">
+                     <tooltip>
+                        <Tooltip text="減號、負號" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="multiply" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="×">
+                     <tooltip>
+                        <Tooltip text="乘號、外積" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="fraction1" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="*">
+                     <tooltip>
+                        <Tooltip text="星號、乘號" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="divide" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="÷">
+                     <tooltip>
+                        <Tooltip text="除號" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="fraction" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="/">
+                     <tooltip>
+                        <Tooltip text="除號、分數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="plusOrMinus" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="±">
+                     <tooltip>
+                        <Tooltip text="正負" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="minusOrPlus" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∓">
+                     <tooltip>
+                        <Tooltip text="負正" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="dot" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∙">
+                     <tooltip>
+                        <Tooltip text="乘號、內積" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="upcast" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="^">
+                     <tooltip>
+                        <Tooltip text="指數、上標" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="colon" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text=":">
+                     <tooltip>
+                        <Tooltip text="比例、冒號" />
+                     </tooltip>
+                  </Button>
+               </children>
+            </HBox>
+            <Label text="特殊運算：" />
+            <HBox prefHeight="26.0" prefWidth="603.0">
+               <children>
+                  <Button fx:id="root2" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="√">
+                     <tooltip>
+                        <Tooltip text="平方根" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="root3" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∛">
+                     <tooltip>
+                        <Tooltip text="三次根" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="root4" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∜">
+                     <tooltip>
+                        <Tooltip text="四次根" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="singleBar" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="|">
+                     <tooltip>
+                        <Tooltip text="槓號" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="factorial" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="!">
+                     <tooltip>
+                        <Tooltip text="驚嘆號、階乘" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="similar" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="~">
+                     <tooltip>
+                        <Tooltip text="相似、至" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="sigma" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∑">
+                     <tooltip>
+                        <Tooltip text="連加號" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="sigmaMultiply" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∏">
+                     <tooltip>
+                        <Tooltip text="連乘號" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="contMultiply" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∐" />
+                  <Button fx:id="i" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="i">
+                     <tooltip>
+                        <Tooltip text="虛數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="eula" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="e">
+                     <tooltip>
+                        <Tooltip text="尤拉數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="infinite" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∞">
+                     <tooltip>
+                        <Tooltip text="無限" />
+                     </tooltip>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="26.0" prefWidth="603.0">
+               <children>
+                  <Button fx:id="limit" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="lim">
+                     <tooltip>
+                        <Tooltip text="極限" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="log" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="log">
+                     <tooltip>
+                        <Tooltip text="對數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="log_10" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="log₁₀">
+                     <tooltip>
+                        <Tooltip text="10的對數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="log_e" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="logₑ">
+                     <tooltip>
+                        <Tooltip text="e的對數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="ln" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="ln">
+                     <tooltip>
+                        <Tooltip text="自然對數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="smallBracket" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="()">
+                     <tooltip>
+                        <Tooltip text="小括號" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="mediumBracket" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="[]">
+                     <tooltip>
+                        <Tooltip text="中括號" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="largeBracket" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="{}">
+                     <tooltip>
+                        <Tooltip text="大括號" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="vectorBracket" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="&lt;&gt;">
+                     <tooltip>
+                        <Tooltip text="折角括號、向量括號" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="absoluteBracket" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="||">
+                     <tooltip>
+                        <Tooltip text="絕對值" />
+                     </tooltip>
+                  </Button>
+               </children>
+            </HBox>
+            <Label text="函數：" />
+            <HBox prefHeight="27.0" prefWidth="603.0">
+               <children>
+                  <Button fx:id="ofx" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="(x)">
+                     <tooltip>
+                        <Tooltip text="函數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="fofx" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="f(x)">
+                     <tooltip>
+                        <Tooltip text="函數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="gofx" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="g(x)">
+                     <tooltip>
+                        <Tooltip text="函數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="hofx" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="h(x)">
+                     <tooltip>
+                        <Tooltip text="函數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="ofx1" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="func.">
+                     <tooltip>
+                        <Tooltip text="函數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="ifAndOnlyIf" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="iff.">
+                     <tooltip>
+                        <Tooltip text="唯一狀況" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="sinc" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="sinc">
+                     <tooltip>
+                        <Tooltip text="Sinc函數" />
+                     </tooltip>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="26.0" prefWidth="603.0">
+               <children>
+                  <Button fx:id="sine" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="sin">
+                     <tooltip>
+                        <Tooltip text="正弦函數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="cosine" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="cos">
+                     <tooltip>
+                        <Tooltip text="餘弦函數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="tangent" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="tan">
+                     <tooltip>
+                        <Tooltip text="正切函數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="cotangent" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="cot">
+                     <tooltip>
+                        <Tooltip text="餘切函數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="secant" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="sec">
+                     <tooltip>
+                        <Tooltip text="正割函數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="cosecant" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="csc">
+                     <tooltip>
+                        <Tooltip text="餘割函數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="sinh" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="sinh">
+                     <tooltip>
+                        <Tooltip text="雙曲正弦函數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="cosh" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="cosh">
+                     <tooltip>
+                        <Tooltip text="雙曲餘弦函數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="tanh" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="tanh">
+                     <tooltip>
+                        <Tooltip text="雙曲正切函數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="coth" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="coth">
+                     <tooltip>
+                        <Tooltip text="雙曲餘切函數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="sech" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="sech">
+                     <tooltip>
+                        <Tooltip text="雙曲正割函數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="csch" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="csch">
+                     <tooltip>
+                        <Tooltip text="雙曲餘割函數" />
+                     </tooltip>
+                  </Button>
+               </children>
+            </HBox>
+            <Label text="微積分：" />
+            <HBox prefHeight="26.0" prefWidth="603.0">
+               <children>
+                  <Button fx:id="partial" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∂">
+                     <tooltip>
+                        <Tooltip text="偏微分" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="functionalDerivative" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="𝛿">
+                     <tooltip>
+                        <Tooltip text="函數微分" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="updelta" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∆">
+                     <tooltip>
+                        <Tooltip text="間隔差" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="downdelta" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∇">
+                     <tooltip>
+                        <Tooltip text="梯度(gradient)" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="derivative1" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="'">
+                     <tooltip>
+                        <Tooltip text="一階導數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="derivative2" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="''">
+                     <tooltip>
+                        <Tooltip text="二階導數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="derivative3" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="‴">
+                     <tooltip>
+                        <Tooltip text="三階導數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="continuous" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="cont.">
+                     <tooltip>
+                        <Tooltip text="連續" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="convergent" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="conv.">
+                     <tooltip>
+                        <Tooltip text="收斂" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="divergent" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="div.">
+                     <tooltip>
+                        <Tooltip text="發散" />
+                     </tooltip>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="26.0" prefWidth="603.0">
+               <children>
+                  <Button fx:id="composite" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="○">
+                     <tooltip>
+                        <Tooltip text="合成函數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="integral1" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∫">
+                     <tooltip>
+                        <Tooltip text="積分號" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="integral2" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∬">
+                     <tooltip>
+                        <Tooltip text="二重積分號" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="integral3" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∭">
+                     <tooltip>
+                        <Tooltip text="三重積分號" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="closeIntegral1" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∮">
+                     <tooltip>
+                        <Tooltip text="閉積分號" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="closeIntegral2" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∯">
+                     <tooltip>
+                        <Tooltip text="二重閉積分號" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="closeIntegral3" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∰">
+                     <tooltip>
+                        <Tooltip text="三重閉積分號" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="sigma_x" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="σₓ" />
+                  <Button fx:id="sigma_y" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="σᵧ" />
+               </children>
+            </HBox>
+            <Label text="集合、推導：" />
+            <HBox prefHeight="26.0" prefWidth="603.0">
+               <children>
+                  <Button fx:id="set" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∁">
+                     <tooltip>
+                        <Tooltip text="組合" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="emptySet" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∅">
+                     <tooltip>
+                        <Tooltip text="空集合" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="belong" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∈">
+                     <tooltip>
+                        <Tooltip text="屬於" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="intersect" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∩">
+                     <tooltip>
+                        <Tooltip text="交集" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="union" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∪">
+                     <tooltip>
+                        <Tooltip text="聯集" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="subset" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="⊂">
+                     <tooltip>
+                        <Tooltip text="子集" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="superset" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="⊃">
+                     <tooltip>
+                        <Tooltip text="父集" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="derive1" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="⇒">
+                     <tooltip>
+                        <Tooltip text="可推導" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="mutual1" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="⇔">
+                     <tooltip>
+                        <Tooltip text="可雙向推導" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="derive2" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="→">
+                     <tooltip>
+                        <Tooltip text="可推導" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="mutual2" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="↔">
+                     <tooltip>
+                        <Tooltip text="可雙向推導" />
+                     </tooltip>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="25.0" prefWidth="603.0">
+               <children>
+                  <Button fx:id="forall" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∀">
+                     <tooltip>
+                        <Tooltip text="對於所有" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="thereexist" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∃">
+                     <tooltip>
+                        <Tooltip text="存在" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="theredoesntexist" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∄">
+                     <tooltip>
+                        <Tooltip text="不存在" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="thereonlyexist" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∃!">
+                     <tooltip>
+                        <Tooltip text="存在且唯一" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="because" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∵">
+                     <tooltip>
+                        <Tooltip text="因為" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="so" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∴">
+                     <tooltip>
+                        <Tooltip text="所以" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="propotional" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∝">
+                     <tooltip>
+                        <Tooltip text="正比於" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="endOfProof1" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="■">
+                     <tooltip>
+                        <Tooltip text="論證結束" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="endOfProof2" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="□">
+                     <tooltip>
+                        <Tooltip text="論證結束" />
+                     </tooltip>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="25.0" prefWidth="603.0">
+               <children>
+                  <Button fx:id="normal" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="ℕ">
+                     <tooltip>
+                        <Tooltip text="自然數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="n_o" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="№">
+                     <tooltip>
+                        <Tooltip text="包括0的自然數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="integer" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="ℤ">
+                     <tooltip>
+                        <Tooltip text="整數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="resonable" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="ℚ">
+                     <tooltip>
+                        <Tooltip text="有理數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="real" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="ℝ">
+                     <tooltip>
+                        <Tooltip text="實數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="real_2" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="ℝ²">
+                     <tooltip>
+                        <Tooltip text="二次空間內的實數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="real_3" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="ℝ³">
+                     <tooltip>
+                        <Tooltip text="三次空間內的實數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="complex" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="ℂ">
+                     <tooltip>
+                        <Tooltip text="複數" />
+                     </tooltip>
+                  </Button>
+               </children>
+            </HBox>
+            <Label text="空間：" />
+            <HBox prefHeight="25.0" prefWidth="603.0">
+               <children>
+                  <Button fx:id="parallel" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∥">
+                     <tooltip>
+                        <Tooltip text="平行" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="inparallel" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="∦">
+                     <tooltip>
+                        <Tooltip text="不平行" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="perpendicular" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="⊥">
+                     <tooltip>
+                        <Tooltip text="垂直" />
+                     </tooltip>
+                  </Button>
+               </children>
+            </HBox>
+            <Label text="字母、符號：" />
+            <HBox prefHeight="26.0" prefWidth="603.0">
+               <children>
+                  <Button fx:id="one" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="1" />
+                  <Button fx:id="two" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="2" />
+                  <Button fx:id="three" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="3" />
+                  <Button fx:id="four" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="4" />
+                  <Button fx:id="five" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="5" />
+                  <Button fx:id="six" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="6" />
+                  <Button fx:id="seven" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="7" />
+                  <Button fx:id="eight" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="8" />
+                  <Button fx:id="nine" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="9" />
+                  <Button fx:id="ten" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="0" />
+                  <Button fx:id="a" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="a" />
+                  <Button fx:id="b" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="b" />
+               </children>
+            </HBox>
+            <HBox prefHeight="26.0" prefWidth="603.0">
+               <children>
+                  <Button fx:id="c" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="c" />
+                  <Button fx:id="de" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="d" />
+                  <Button fx:id="c" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="e" />
+                  <Button fx:id="f" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="f" />
+                  <Button fx:id="g" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="g" />
+                  <Button fx:id="alphha145" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="h" />
+                  <Button fx:id="i" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="i" />
+                  <Button fx:id="j" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="j" />
+                  <Button fx:id="alpkha148" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="k" />
+                  <Button fx:id="l" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="l" />
+                  <Button fx:id="m" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="m" />
+                  <Button fx:id="m" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="n" />
+               </children>
+            </HBox>
+            <HBox prefHeight="26.0" prefWidth="603.0">
+               <children>
+                  <Button fx:id="o" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="o" />
+                  <Button fx:id="p" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="p" />
+                  <Button fx:id="q" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="q" />
+                  <Button fx:id="r" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="r" />
+                  <Button fx:id="s" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="s" />
+                  <Button fx:id="t" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="t" />
+                  <Button fx:id="u" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="u" />
+                  <Button fx:id="v" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="v" />
+                  <Button fx:id="w" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="w" />
+                  <Button mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="x" fx:id="x" />
+                  <Button fx:id="y" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="y" />
+                  <Button fx:id="z" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="z" />
+               </children>
+            </HBox>
+            <HBox prefHeight="25.0" prefWidth="603.0">
+               <children>
+                  <Button fx:id="alpha" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="α" />
+                  <Button fx:id="beta" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="β" />
+                  <Button fx:id="gamma1" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="γ" />
+                  <Button fx:id="delta" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="δ" />
+                  <Button fx:id="epsilon2" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="ε" />
+                  <Button fx:id="epsilon1" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="ϵ" />
+                  <Button fx:id="zeta" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="ϛ" />
+                  <Button fx:id="eta" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="η" />
+                  <Button fx:id="theta1" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="θ" />
+                  <Button fx:id="kappa" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="κ" />
+                  <Button fx:id="lambda1" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="λ" />
+                  <Button fx:id="mu" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="μ" />
+               </children>
+            </HBox>
+            <HBox prefHeight="25.0" prefWidth="603.0">
+               <children>
+                  <Button fx:id="nu" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="𝜈" />
+                  <Button fx:id="pi" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="π" />
+                  <Button fx:id="rho" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="ρ" />
+                  <Button fx:id="sigma2" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="σ" />
+                  <Button fx:id="tau" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="τ" />
+                  <Button fx:id="phi1" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="ϕ" />
+                  <Button fx:id="omega1" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="ω" />
+                  <Button fx:id="gamma2" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="Γ" />
+                  <Button fx:id="koppa" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="Ϛ" />
+                  <Button fx:id="theta2" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="Θ" />
+                  <Button fx:id="lambda2" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="Λ" />
+                  <Button fx:id="phi2" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="Φ" />
+               </children>
+            </HBox>
+            <HBox prefHeight="25.0" prefWidth="603.0">
+               <children>
+                  <Button fx:id="psi" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="Ψ" />
+                  <Button fx:id="omega2" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="Ω" />
+                  <Button fx:id="dram" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="ℨ" />
+                  <Button fx:id="trademark" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="™">
+                     <tooltip>
+                        <Tooltip text="商標符號" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="onehalf" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="¹⁄₂">
+                     <tooltip>
+                        <Tooltip text="斜體分數符號 (可更改數值)" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="percent" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="\%">
+                     <tooltip>
+                        <Tooltip text="百分比" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="ae" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="Æ" />
+                  <Button fx:id="section" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="§">
+                     <tooltip>
+                        <Tooltip text="章節" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="comma" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text=",">
+                     <tooltip>
+                        <Tooltip text="逗號" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="and" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="&amp;">
+                     <tooltip>
+                        <Tooltip text="和、連接號" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="omission" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="⋯">
+                     <tooltip>
+                        <Tooltip text="省略號" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="colon1" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="?">
+                     <tooltip>
+                        <Tooltip text="問號" />
+                     </tooltip>
+                  </Button>
+               </children>
+            </HBox>
+            <Label text="物理學：" />
+            <HBox prefHeight="26.0" prefWidth="603.0">
+               <children>
+                  <Button fx:id="celcius" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="℃">
+                     <tooltip>
+                        <Tooltip text="攝氏" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="fahrenheit" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="℉">
+                     <tooltip>
+                        <Tooltip text="華氏" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="aring" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="Å">
+                     <tooltip>
+                        <Tooltip text="埃 (=10^-10 m)" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="epsilon_o" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="εₒ">
+                     <tooltip>
+                        <Tooltip text="真空電導率" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="planck" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="ℏ">
+                     <tooltip>
+                        <Tooltip text="普朗克常數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="quantum_l" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="ℓ">
+                     <tooltip>
+                        <Tooltip text="量子數" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="mu_o" mnemonicParsing="false" onAction="#mathSign" prefHeight="25.0" prefWidth="50.0" text="μₒ">
+                     <tooltip>
+                        <Tooltip text="真空磁導率" />
+                     </tooltip>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

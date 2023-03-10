@@ -1,0 +1,23 @@
+isInResizableNW
+isInResizableNE
+isInResizableSW
+isInResizableSE
+
+
+Drag:
+else if (isInResizableSE) {
+                        double mouseX = event.getX() - selectedImage.getX();
+                        double mouseY = event.getY() - selectedImage.getY();
+                        selectedImage = (ImageView) event.getSource();
+                        selectedImage.setFitWidth(mouseX + Subject_Var.XShift);
+                        selectedImage.setFitHeight(mouseY + Subject_Var.YShift);
+                    }
+
+Pressed:
+if (isInResizableSE) {
+                        System.out.println("Start Resizing: SE");
+                        selectedImage = (ImageView) event.getSource();
+                        Subject_Var.XShift = selectedImage.getX() + selectedImage.getFitWidth() - event.getX();
+                        Subject_Var.YShift = selectedImage.getY() + selectedImage.getFitHeight() - event.getY();
+                        event.setDragDetect(true);
+                    
