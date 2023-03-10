@@ -1,2 +1,2 @@
 # JavaFX_Notebook
-notebook implemented by JavaFX
+Notebook implemented by JavaFX
